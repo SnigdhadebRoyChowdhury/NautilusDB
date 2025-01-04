@@ -1,7 +1,7 @@
 # TyniDB
 
-<img src="TyniDB.png" alt="Logo" width="300" style="display: block; margin-left: auto;">
-
-
+<p align="center">
+    <img width="300" src="TyniDB.png" alt="Material Bread logo">
+</p>
 TyniDB is database that has been created to understand how databases work under the hood
 
