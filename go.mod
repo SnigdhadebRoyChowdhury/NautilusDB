@@ -1,4 +1,4 @@
-module TyniDB
+module NautilusDB
 
 go 1.23.2
 

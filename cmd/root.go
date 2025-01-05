@@ -1,5 +1,5 @@
 /*
-	TyniDB is database that has been created to understand how databases work under the hood
+	NautilusDB is database that has been created to understand how databases work under the hood
     Copyright (C) 2025  Snigdhadeb Roy Chowdhury
 
     This program is free software: you can redistribute it and/or modify
@@ -46,9 +46,9 @@ func showLicense() {
 }
 
 var rootCmd = &cobra.Command{
-	Use:   "TyniDB",
-	Short: "TyniDB is database that has been created to understand how databases work under the hood",
-	Long:  "TyniDB is database that has been created to understand how databases work under the hood",
+	Use:   "NautilusDB",
+	Short: "NautilusDB is database that has been created to understand how databases work under the hood",
+	Long:  "NautilusDB is database that has been created to understand how databases work under the hood",
 	Run: func(cmd *cobra.Command, args []string) {
 		// fmt.Printf("Name: %s\n", name)
 		// fmt.Printf("Age: %d\n", age)

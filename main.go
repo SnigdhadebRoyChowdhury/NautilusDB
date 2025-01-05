@@ -1,5 +1,5 @@
 /*
-	TyniDB is database that has been created to understand how databases work under the hood
+	NautilusDB is database that has been created to understand how databases work under the hood
     Copyright (C) 2025  Snigdhadeb Roy Chowdhury
 
     This program is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@
 package main
 
 import (
-	"TyniDB/cmd"
+	"NautilusDB/cmd"
 )
 
 func main() {

@@ -31,7 +31,7 @@ import (
 func repl() {
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Println("Welcome to TyniDB")
+	fmt.Println("Welcome to NautilusDB")
 	fmt.Println("Type 'exit' to quit")
 
 	for {
