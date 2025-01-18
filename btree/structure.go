@@ -19,14 +19,20 @@
 	Email: snigdhadeb_roychowdhury@outlook.com
 */
 
-package main
+package btree
 
-import (
-	// "NautilusDB/cmd"
-	"fmt"
+const (
+	NODE_NODE = 1
+	NODE_LEAF = 2
 )
 
-func main() {
-	fmt.Println("Hello, this NautilusDB")
-	// cmd.Execute()
+type Node struct {
+	data []byte
+}
+
+type Tree struct {
+	root uint64
+	get  func(uint64) Node
+	new  func(Node) uint64
+	del  func(uint64)
 }
