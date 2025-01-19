@@ -73,3 +73,42 @@ func (node BPlusNode) setPointer(idx uint16, val uint64) {
 	binary.LittleEndian.PutUint64(node.data[pos:], val)
 
 }
+
+func offsetPos(node BPlusNode, idx uint16) uint16 {
+	return HEADER + (8 * node.nkeys()) + (2 * (idx - 1))
+}
+
+func (node BPlusNode) getOffset(idx uint16) uint16 {
+	if idx == 0 {
+		return 0
+	}
+
+	return binary.LittleEndian.Uint16(node.data[offsetPos(node, idx):])
+}
+
+func (node BPlusNode) setOffset(idx uint16, offset uint16) {
+	binary.LittleEndian.PutUint16(node.data[offsetPos(node, idx):], offset)
+}
+
+// The offset list is used to locate the nth Key-Value pair quickly
+
+func (node BPlusNode) kvPos(idx uint16) uint16 {
+	return HEADER + (8 * node.nkeys()) + (2 * node.nkeys()) + node.getOffset(idx)
+}
+
+func (node BPlusNode) getKey(idx uint16) []byte {
+	pos := node.kvPos(idx)
+	klen := binary.LittleEndian.Uint16(node.data[pos:])
+	return node.data[pos+4:][:klen]
+}
+
+func (node BPlusNode) getVal(idx uint16) []byte {
+	pos := node.kvPos(idx)
+	klen := binary.LittleEndian.Uint16(node.data[pos+0:])
+	vlen := binary.LittleEndian.Uint16(node.data[pos+2:])
+	return node.data[pos+4+klen:][:vlen]
+}
+
+func (node BPlusNode) nbytes() uint16 {
+	return node.kvPos(node.nkeys())
+}
