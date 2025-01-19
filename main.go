@@ -24,9 +24,12 @@ package main
 import (
 	// "NautilusDB/cmd"
 	"fmt"
+	"syscall"
 )
 
 func main() {
 	fmt.Println("Hello, this NautilusDB")
+	pageSize := syscall.Getpagesize()
+	fmt.Printf("Page size: %d bytes\n", pageSize)
 	// cmd.Execute()
 }
