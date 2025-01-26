@@ -19,20 +19,11 @@
 	Email: snigdhadeb_roychowdhury@outlook.com
 */
 
-package main
+package cmd
 
-import (
-	"NautilusDB/location"
-	"fmt"
-)
-
-func main() {
-	fmt.Println("Hello, this NautilusDB")
-	// pageSize := syscall.Getpagesize()
-	// fmt.Printf("Page size: %d bytes\n", pageSize)
-	// cmd.Execute()
-	err := location.CheckLocation("employees")
+func CheckError(err error) error {
 	if err != nil {
-		fmt.Println("Error:", err)
+		return err
 	}
+	return nil
 }

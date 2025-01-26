@@ -22,43 +22,52 @@
 package location
 
 import (
-	"fmt"
+	"NautilusDB/cmd"
 	"os"
 )
 
 func createDir(dir_name string) error {
 	err := os.Mkdir(dir_name, 0750)
-	if err != nil {
-		return err
-	}
-
-	return nil
+	return cmd.CheckError(err)
 }
 
 func changeDir(dir_name string) error {
 	err := os.Chdir(dir_name)
-
-	if err != nil {
-		return err
-	}
-
-	return nil
+	return cmd.CheckError(err)
 }
 
-// The below function checks whether an object exists in the
-func CheckDir(dir_name string) error {
-	info, err := os.Stat(dir_name)
+func checkRoot(dir_name string) string {
+	if dir_name == "nautilus" {
+		return dir_name
+	} else {
+		path := "nautilus/" + dir_name
+		return path
+	}
+}
+
+func checkExists(dir_name string) bool {
+	_, err := os.Stat(dir_name)
 	if err != nil {
 		if os.IsNotExist(err) {
-			err = createDir(dir_name)
-			if err != nil {
-				return err
-			}
-			return nil
+			return false
 		} else {
-			return err
+			panic(err)
 		}
 	}
-	fmt.Println(info)
-	return nil
+	return true
+}
+
+func CheckLocation(dir_name string) error {
+	path := checkRoot(dir_name)
+	if checkExists(path) {
+		err := changeDir(path)
+		return cmd.CheckError(err)
+	} else {
+		err := createDir(path)
+		if err != nil {
+			return err
+		}
+		err = changeDir(path)
+		return cmd.CheckError(err)
+	}
 }
