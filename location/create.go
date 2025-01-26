@@ -1,5 +1,5 @@
 /*
-	NautilusDB is database that has been created to understand how databases work under the hood
+	TyniDB is database that has been created to understand how databases work under the hood
     Copyright (C) 2025  Snigdhadeb Roy Chowdhury
 
     This program is free software: you can redistribute it and/or modify
@@ -19,21 +19,46 @@
 	Email: snigdhadeb_roychowdhury@outlook.com
 */
 
-package main
+package location
 
 import (
-	// "NautilusDB/cmd"
-	"NautilusDB/location"
 	"fmt"
+	"os"
 )
 
-func main() {
-	fmt.Println("Hello, this NautilusDB")
-	// pageSize := syscall.Getpagesize()
-	// fmt.Printf("Page size: %d bytes\n", pageSize)
-	// cmd.Execute()
-	err := location.CheckDir("nautiluss")
+func createDir(dir_name string) error {
+	err := os.Mkdir(dir_name, 0750)
 	if err != nil {
-		fmt.Println("Error:", err)
+		return err
 	}
+
+	return nil
+}
+
+func changeDir(dir_name string) error {
+	err := os.Chdir(dir_name)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// The below function checks whether an object exists in the
+func CheckDir(dir_name string) error {
+	info, err := os.Stat(dir_name)
+	if err != nil {
+		if os.IsNotExist(err) {
+			err = createDir(dir_name)
+			if err != nil {
+				return err
+			}
+			return nil
+		} else {
+			return err
+		}
+	}
+	fmt.Println(info)
+	return nil
 }
