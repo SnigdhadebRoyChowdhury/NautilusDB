@@ -19,14 +19,10 @@
 	Email: snigdhadeb_roychowdhury@outlook.com
 */
 
-package main
+package parser
 
-import (
-	"NautilusDB/initialize"
-	"fmt"
-)
+import "fmt"
 
-func main() {
-	fmt.Println("Hello, this NautilusDB")
-	initialize.InitNautilus()
+func UseDatabase(param1 string) {
+	fmt.Println("Hello from " + param1)
 }

@@ -19,14 +19,14 @@
 	Email: snigdhadeb_roychowdhury@outlook.com
 */
 
-package main
+package initialize
 
 import (
-	"NautilusDB/initialize"
-	"fmt"
+	"NautilusDB/cmd"
+	"NautilusDB/location"
 )
 
-func main() {
-	fmt.Println("Hello, this NautilusDB")
-	initialize.InitNautilus()
+func InitNautilus() {
+	location.CheckLocation("nautilus")
+	cmd.Execute()
 }

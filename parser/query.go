@@ -19,14 +19,14 @@
 	Email: snigdhadeb_roychowdhury@outlook.com
 */
 
-package main
+package parser
 
 import (
-	"NautilusDB/initialize"
 	"fmt"
+	"strings"
 )
 
-func main() {
-	fmt.Println("Hello, this NautilusDB")
-	initialize.InitNautilus()
+func CommandType(str string) {
+	first_word := strings.Split(str, " ")
+	fmt.Println(first_word[0])
 }

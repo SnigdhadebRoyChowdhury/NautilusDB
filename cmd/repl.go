@@ -26,6 +26,8 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"NautilusDB/parser"
 )
 
 func repl() {
@@ -33,7 +35,6 @@ func repl() {
 
 	fmt.Println("Welcome to NautilusDB")
 	fmt.Println("Type 'exit' to quit")
-
 	for {
 		// Display a prompt
 		fmt.Print("> ")
@@ -49,6 +50,6 @@ func repl() {
 		}
 
 		// Evaluate and respond
-		fmt.Printf("You typed: %s\n", input)
+		parser.CommandType(input)
 	}
 }
