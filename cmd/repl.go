@@ -33,7 +33,6 @@ func repl() {
 
 	fmt.Println("Welcome to NautilusDB")
 	fmt.Println("Type 'exit' to quit")
-
 	for {
 		// Display a prompt
 		fmt.Print("> ")
