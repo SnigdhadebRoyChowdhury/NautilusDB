@@ -1,5 +1,5 @@
 /*
-	TyniDB is database that has been created to understand how databases work under the hood
+	NautilusDB is database that has been created to understand how databases work under the hood
     Copyright (C) 2025  Snigdhadeb Roy Chowdhury
 
     This program is free software: you can redistribute it and/or modify
@@ -19,37 +19,4 @@
 	Email: snigdhadeb_roychowdhury@outlook.com
 */
 
-package cmd
-
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strings"
-
-	"NautilusDB/parser"
-)
-
-func repl() {
-	reader := bufio.NewReader(os.Stdin)
-
-	fmt.Println("Welcome to NautilusDB")
-	fmt.Println("Type 'exit' to quit")
-	for {
-		// Display a prompt
-		fmt.Print("> ")
-
-		// Read input from the user
-		input, _ := reader.ReadString('\n')
-		input = strings.TrimSpace(input)
-
-		// Exit condition
-		if input == "exit" {
-			fmt.Println("Goodbye!")
-			break
-		}
-
-		// Evaluate and respond
-		parser.UseDatabase("Roy")
-	}
-}
+package parser
