@@ -20,3 +20,13 @@
 */
 
 package parser
+
+import (
+	"fmt"
+	"strings"
+)
+
+func CommandType(str string) {
+	first_word := strings.Split(str, " ")
+	fmt.Println(first_word[0])
+}

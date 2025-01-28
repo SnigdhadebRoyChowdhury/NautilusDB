@@ -50,6 +50,6 @@ func repl() {
 		}
 
 		// Evaluate and respond
-		parser.UseDatabase("Roy")
+		parser.CommandType(input)
 	}
 }
