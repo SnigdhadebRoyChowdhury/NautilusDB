@@ -26,17 +26,17 @@ import (
 	"os"
 )
 
-func createDir(dir_name string) error {
+func CreateDir(dir_name string) error {
 	err := os.Mkdir(dir_name, 0750)
 	return cmd.CheckError(err)
 }
 
-func changeDir(dir_name string) error {
+func ChangeDir(dir_name string) error {
 	err := os.Chdir(dir_name)
 	return cmd.CheckError(err)
 }
 
-func checkRoot(dir_name string) string {
+func CheckRoot(dir_name string) string {
 	if dir_name == "nautilus" {
 		return dir_name
 	} else {
@@ -45,7 +45,7 @@ func checkRoot(dir_name string) string {
 	}
 }
 
-func checkExists(dir_name string) bool {
+func CheckExists(dir_name string) bool {
 	_, err := os.Stat(dir_name)
 	if err != nil {
 		if os.IsNotExist(err) {
@@ -58,16 +58,16 @@ func checkExists(dir_name string) bool {
 }
 
 func CheckLocation(dir_name string) error {
-	path := checkRoot(dir_name)
-	if checkExists(path) {
-		err := changeDir(path)
+	path := CheckRoot(dir_name)
+	if CheckExists(path) {
+		err := ChangeDir(path)
 		return cmd.CheckError(err)
 	} else {
-		err := createDir(path)
+		err := CreateDir(path)
 		if err != nil {
 			return err
 		}
-		err = changeDir(path)
+		err = ChangeDir(path)
 		return cmd.CheckError(err)
 	}
 }
