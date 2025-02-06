@@ -23,6 +23,6 @@ package parser
 
 import "fmt"
 
-func UseDatabase(param1 string) {
-	fmt.Println("Hello from " + param1)
+func useDatabase(db_name string) {
+	fmt.Println("Hello from " + db_name)
 }
