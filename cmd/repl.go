@@ -41,6 +41,7 @@ func repl() {
 
 		// Read input from the user
 		input, _ := reader.ReadString(';')
+		input = strings.TrimSpace(input)
 		input = strings.Trim(input, ";")
 
 		// Exit condition

@@ -26,7 +26,26 @@ import (
 	"strings"
 )
 
+var (
+	DDL_IDENTIFIER = []string{"use", "create"}
+)
+
+func checkValueExists(v string, list []string) bool {
+	for _, val := range list {
+		if val == v {
+			return true
+		}
+	}
+	return false
+}
+
 func CommandType(str string) {
-	first_word := strings.Split(str, " ")
-	fmt.Println(first_word[0])
+	lower_str := strings.ToLower(str)
+	switch {
+	case checkValueExists(strings.Split(lower_str, " ")[0], DDL_IDENTIFIER) && strings.Split(lower_str, " ")[0] == "use":
+		useDatabase(strings.Split(lower_str, " ")[1])
+	default:
+		fmt.Println("Not able to parse incorrect command. Please check the available commands for NautilusDB.")
+	}
+
 }
