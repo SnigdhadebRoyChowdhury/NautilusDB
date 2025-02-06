@@ -40,8 +40,8 @@ func repl() {
 		fmt.Print("> ")
 
 		// Read input from the user
-		input, _ := reader.ReadString('\n')
-		input = strings.TrimSpace(input)
+		input, _ := reader.ReadString(';')
+		input = strings.Trim(input, ";")
 
 		// Exit condition
 		if input == "exit" {
