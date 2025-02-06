@@ -23,6 +23,7 @@ package location
 
 import (
 	"NautilusDB/cmd"
+	"errors"
 	"os"
 )
 
@@ -62,12 +63,10 @@ func CheckLocation(dir_name string) error {
 	if CheckExists(path) {
 		err := ChangeDir(path)
 		return cmd.CheckError(err)
-	} else {
+	} else if path == "nautilus" {
 		err := CreateDir(path)
-		if err != nil {
-			return err
-		}
-		err = ChangeDir(path)
 		return cmd.CheckError(err)
+	} else {
+		return errors.New("the path does not exist")
 	}
 }
