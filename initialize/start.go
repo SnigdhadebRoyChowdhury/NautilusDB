@@ -27,6 +27,6 @@ import (
 )
 
 func InitNautilus() {
-	location.CheckLocation("nautilus")
+	location.CheckRootLocation("nautilus")
 	cmd.Execute()
 }

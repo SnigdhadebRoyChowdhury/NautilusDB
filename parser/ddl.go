@@ -32,14 +32,32 @@ func whichDDLCommand(cmd_str string) {
 	switch {
 	case strings.Split(cmd_str, " ")[0] == "USE":
 		useDatabase(strings.Split(cmd_str, " ")[1])
+	case strings.Split(cmd_str, " ")[0] == "CREATE" && strings.Split(cmd_str, " ")[1] == "DATABASE":
+		createDatabase(strings.Split(cmd_str, " ")[2])
+	default:
+		fmt.Println("Incorrect command. Please check the available commands for NautilusDB.")
 	}
 }
 
 func useDatabase(db_name string) {
-	db_location := "nautilus/" + db_name
-	if location.CheckExists(db_location) {
-		location.ChangeDir(db_location)
+	if location.CheckExists(db_name) {
+		location.ChangeDir(db_name)
 	} else {
-		fmt.Println("Database does not exist. Please use CREATE DATABASE command to create the database.")
+		fmt.Println("ERROR: Database does not exist. Please use CREATE DATABASE command to create the database.")
 	}
+}
+
+func createDatabase(db_name string) {
+	if location.CheckExists(db_name) {
+		fmt.Println("ERROR: The database " + db_name + " already exists. ")
+	} else {
+		err := location.CreateDir(db_name)
+
+		if err != nil {
+			fmt.Println(err)
+		} else {
+			fmt.Println("Database " + db_name + " created...")
+		}
+	}
+
 }
