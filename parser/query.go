@@ -45,7 +45,7 @@ func DatabaseCommand(cmd_str string) {
 	case checkValueExists(strings.Split(upper_cmd_str, " ")[0], DDL_IDENTIFIER):
 		whichDDLCommand(upper_cmd_str)
 	default:
-		fmt.Println("Incorrect command. Please check the available commands for NautilusDB.")
+		fmt.Println("ERROR: Incorrect command. Please check the available commands for NautilusDB.")
 	}
 
 }
