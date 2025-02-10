@@ -24,6 +24,8 @@ package parser
 import (
 	"fmt"
 	"strings"
+
+	"NautilusDB/location"
 )
 
 func whichDDLCommand(cmd_str string) {
@@ -34,5 +36,10 @@ func whichDDLCommand(cmd_str string) {
 }
 
 func useDatabase(db_name string) {
-	fmt.Println("Hello from " + db_name)
+	db_location := "nautilus/" + db_name
+	if location.CheckExists(db_location) {
+		location.ChangeDir(db_location)
+	} else {
+		fmt.Println("Database does not exist. Please use CREATE DATABASE command to create the database.")
+	}
 }

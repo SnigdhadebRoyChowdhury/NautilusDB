@@ -22,19 +22,26 @@
 package location
 
 import (
-	"NautilusDB/cmd"
 	"errors"
 	"os"
 )
 
+// The below function has been created to re-use the error checking in each function in this package
+func checkError(err error) error {
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 func CreateDir(dir_name string) error {
 	err := os.Mkdir(dir_name, 0750)
-	return cmd.CheckError(err)
+	return checkError(err)
 }
 
 func ChangeDir(dir_name string) error {
 	err := os.Chdir(dir_name)
-	return cmd.CheckError(err)
+	return checkError(err)
 }
 
 func CheckRoot(dir_name string) string {
@@ -62,10 +69,10 @@ func CheckLocation(dir_name string) error {
 	path := CheckRoot(dir_name)
 	if CheckExists(path) {
 		err := ChangeDir(path)
-		return cmd.CheckError(err)
+		return checkError(err)
 	} else if path == "nautilus" {
 		err := CreateDir(path)
-		return cmd.CheckError(err)
+		return checkError(err)
 	} else {
 		return errors.New("the path does not exist")
 	}
