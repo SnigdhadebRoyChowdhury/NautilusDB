@@ -51,6 +51,6 @@ func repl() {
 		}
 
 		// Evaluate and respond
-		parser.CommandType(input)
+		parser.DatabaseCommand(input)
 	}
 }

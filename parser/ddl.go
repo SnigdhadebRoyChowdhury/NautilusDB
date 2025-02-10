@@ -21,7 +21,17 @@
 
 package parser
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+func whichDDLCommand(cmd_str string) {
+	switch {
+	case strings.Split(cmd_str, " ")[0] == "USE":
+		useDatabase(strings.Split(cmd_str, " ")[1])
+	}
+}
 
 func useDatabase(db_name string) {
 	fmt.Println("Hello from " + db_name)
