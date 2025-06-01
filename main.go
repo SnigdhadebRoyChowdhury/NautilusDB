@@ -22,11 +22,10 @@
 package main
 
 import (
-	"NautilusDB/initialize"
 	"fmt"
 )
 
 func main() {
 	fmt.Println("Hello, this NautilusDB")
-	initialize.InitNautilus()
+
 }
