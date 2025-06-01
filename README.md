@@ -6,13 +6,15 @@
 
 ## What is NautilusDB?
 
-NautilusDB is a ***micro database*** currently intended for local use only.
+NautilusDB is a micro database engine designed for local use, with a focus on simplicity, transparency, and user control.
 
-You might ask: Why build yet another local database? After all, plenty of options already exist.
+Given the wide array of local databases already available, it’s reasonable to ask: *Why create another one?*
 
-Well, this project started as something personal. I found myself needing to remember lots of scattered information—things I don't use often, but when I do need them, I'm either unable to recall the details or can't remember where I stored them.
+The motivation behind NautilusDB is both practical and personal. I often find myself needing to store and retrieve information that’s not frequently accessed—details that, when required, are either forgotten or lost in an unclear storage location. Additionally, some of the data I need to store contains personal or sensitive details. While existing solutions could serve this purpose, I wanted a system that I could fully understand, audit, and trust.
 
-Sure, I could’ve used an existing database. But I’m an engineer, and the idea of building my own lightweight solution sounded like a fun challenge—something to tinker with in my free time. More importantly, with growing concerns around cybersecurity and data privacy, I wasn’t entirely comfortable storing personal information in systems I didn’t fully understand or control.
+As an engineer, the idea of building a minimal, self-contained database felt like a worthwhile challenge—an opportunity to explore core database concepts while creating something useful for day-to-day information management. Additionally, in an era where software complexity and external dependencies can introduce significant security risks, having full control over data storage and access mechanisms became a priority for me.
 
-So I started building NautilusDB—a simple, transparent, and self-contained database. The name? It’s inspired by a favorite sci-fi book of mine.
+So I started building NautilusDB—a simple, transparent, and self-contained database. 
+
+The name? It’s inspired by a favorite sci-fi book of mine 🙂.
 
