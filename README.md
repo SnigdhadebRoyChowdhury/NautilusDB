@@ -16,7 +16,7 @@ Given the wide array of local databases already available, it’s reasonable to 
 
 The motivation behind NautilusDB is both practical and personal. I often find myself needing to store and retrieve information that’s not frequently accessed—details that, when required, are either forgotten or lost in an unclear storage location. Additionally, some of the data I need to store contains personal or sensitive details. While existing solutions could serve this purpose, I wanted a system that I could fully understand, audit, and trust.
 
-As an engineer, the idea of building a minimal, self-contained database felt like a worthwhile challenge—an opportunity that allowed me to explore core software engineering concepts while also developing something that can have a practical use. 
+As an engineer, the idea of building a minimal, self-contained database felt like a worthwhile challenge—an opportunity that allowed me to explore core software engineering concepts while also developing something that can have a proper practical use. 
 
 So I started building NautilusDB—a simple, transparent, and self-contained database. 
 
