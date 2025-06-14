@@ -2,7 +2,7 @@
     <img width="300" src="images/nautilusdb.png" alt="Material Bread logo">
 </p>
 
-![alt text](./images/quote_image.png)
+![alt text](image.png)
 
 ## What is NautilusDB?
 
