@@ -2,8 +2,6 @@
     <img width="300" src="images/nautilusdb.png" alt="Material Bread logo">
 </p>
 
-![alt text](./images/quote_image.png)
-
 ## What is NautilusDB?
 
 NautilusDB is a micro database engine designed for local use, with a focus on simplicity, transparency, and user control.
