@@ -2,12 +2,6 @@
     <img width="300" src="images/nautilusdb.png" alt="Material Bread logo">
 </p>
 
-<blockquote style="font-style: italic; font-family: 'Georgia', serif;">
-  If you want to build a ship, don't drum up people to collect wood and don't assign them tasks and work, but rather teach them to long for the endless immensity of the seas.
-  <br><br>
-                                    — Antoine de Saint-Exupéry
-</blockquote>
-
 ## What is NautilusDB?
 
 NautilusDB is a micro database engine designed for local use, with a focus on simplicity, transparency, and user control.
