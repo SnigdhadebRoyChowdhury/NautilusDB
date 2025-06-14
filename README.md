@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300" src="images/Nautilus.png" alt="Material Bread logo">
+    <img width="300" src="images/nautilusdb_circular_transparent.png" alt="Material Bread logo">
 </p>
 
 <blockquote style="font-style: italic; font-family: 'Georgia', serif;">
