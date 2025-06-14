@@ -1,8 +1,15 @@
 # NautilusDB
 
 <p align="center">
-    <img width="300" src="images/Nautilus.jpg" alt="Material Bread logo">
+    <img width="300" src="images/Nautilus.png" alt="Material Bread logo">
 </p>
+
+```
+If you want to build a ship, don't drum up people to collect wood and don't assign them tasks and work, but rather teach them to long for the endless immensity of the seas
+
+                - Antoine de Saint-Exupéry
+
+```
 
 ## What is NautilusDB?
 
@@ -12,9 +19,9 @@ Given the wide array of local databases already available, it’s reasonable to 
 
 The motivation behind NautilusDB is both practical and personal. I often find myself needing to store and retrieve information that’s not frequently accessed—details that, when required, are either forgotten or lost in an unclear storage location. Additionally, some of the data I need to store contains personal or sensitive details. While existing solutions could serve this purpose, I wanted a system that I could fully understand, audit, and trust.
 
-As an engineer, the idea of building a minimal, self-contained database felt like a worthwhile challenge—an opportunity to explore core database concepts while creating something useful for day-to-day information management. Additionally, in an era where software complexity and external dependencies can introduce significant security risks, having full control over data storage and access mechanisms became a priority for me.
+As an engineer, the idea of building a minimal, self-contained database felt like a worthwhile challenge—an opportunity that allowed me to explore core software engineering concepts while also developing something that can have a practical use. 
 
 So I started building NautilusDB—a simple, transparent, and self-contained database. 
 
-The name? It’s inspired by a favorite sci-fi book of mine 🙂.
+
 
