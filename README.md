@@ -1,19 +1,24 @@
-# NautilusDB
-
 <p align="center">
-    <img width="300" src="images/Nautilus.jpg" alt="Material Bread logo">
+    <img width="300" src="images/Nautilus.png" alt="Material Bread logo">
 </p>
-NautilusDB is a database that has been created to understand how databases work under the hood
 
-## What is NautilusDB
+<blockquote style="font-style: italic; font-family: 'Georgia', serif;">
+  If you want to build a ship, don't drum up people to collect wood and don't assign them tasks and work, but rather teach them to long for the endless immensity of the seas.
+  <br><br>
+                                    — Antoine de Saint-Exupéry
+</blockquote>
 
-NautilusDB is a ***micro database*** currently intended for local use only.
+## What is NautilusDB?
 
-You might ask: Why build yet another local database? After all, plenty of options already exist.
+NautilusDB is a micro database engine designed for local use, with a focus on simplicity, transparency, and user control.
 
-Well, this project started as something personal. I found myself needing to remember lots of scattered information—things I don't use often, but when I do need them, I'm either unable to recall the details or can't remember where I stored them.
+Given the wide array of local databases already available, it’s reasonable to ask: *Why create another one?*
 
-Sure, I could’ve used an existing database. But I’m an engineer, and the idea of building my own lightweight solution sounded like a fun challenge—something to tinker with in my free time. More importantly, with growing concerns around cybersecurity and data privacy, I wasn’t entirely comfortable storing personal information in systems I didn’t fully understand or control.
+The motivation behind NautilusDB is both practical and personal. I often find myself needing to store and retrieve information that’s not frequently accessed—details that, when required, are either forgotten or lost in an unclear storage location. Additionally, some of the data I need to store contains personal or sensitive details. While existing solutions could serve this purpose, I wanted a system that I could fully understand, audit, and trust.
 
-So I started building NautilusDB—a simple, transparent, and self-contained database. The name? It’s inspired by a favorite sci-fi book of mine.
+As an engineer, the idea of building a minimal, self-contained database felt like a worthwhile challenge—an opportunity that allowed me to explore core software engineering concepts while also developing something that can have a proper practical use. 
+
+So I started building NautilusDB—a simple, transparent, and self-contained database. 
+
+
 
